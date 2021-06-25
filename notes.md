@@ -1,7 +1,7 @@
 #--Associations--#
 
 Puppy:
--belongs_to :owner
+x-belongs_to :owner
 -has_many :puppy_friends
 -has_many :playdates, through: :puppy_friends
 -has_many :toys 
@@ -11,7 +11,7 @@ Owner:
 -has_many :play_dates through: :puppies
 
 Toy:
--belongs_to :puppy
+x-belongs_to :puppy
 
 PuppyFriend:
 -belongs_to :puppy
@@ -25,31 +25,32 @@ PlayDate:
 #--Attributes--#
 
 Puppy:
--name 
--age
--breed
--sex
--size
--personality 
--owner_id
+x-name 
+x-age
+x-breed
+x-sex
+x-size
+x-personality 
+x-owner_id
 
 Owner:
--username
--password_digest
--name
--age
--city
--bio
+x-username
+x-password_digest
+x-name
+x-age
+x-city
+x-bio
 
 Toy:
--type
+x-type
+
 
 PlayDate:
--location
--date 
--time 
--notes
--user_id
+x-location
+x-date 
+x-time 
+x-notes
+x-owner_id
 
 PuppyFriend:
 -name 
